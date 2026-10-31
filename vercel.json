@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/finnhub/(.*)",
+      "destination": "/api/finnhub"
+    },
+    {
+      "source": "/api/gemini/(.*)",
+      "destination": "/api/gemini"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
