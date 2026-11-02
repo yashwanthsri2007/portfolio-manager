@@ -26,7 +26,7 @@ export default async function handler(req: any, res: any) {
       }
 
       const start = Date.now();
-      const targetUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${token}`;
+      const targetUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${token}`;
 
       const geminiRes = await fetch(targetUrl, {
         method: 'POST',
@@ -64,9 +64,9 @@ export default async function handler(req: any, res: any) {
         const reply = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || 'PONG';
         return res.status(200).json({
           success: true,
-          message: `Connected to Google Gemini successfully (${latency}ms). Model: gemini-2.5-flash`,
+          message: `Connected to Google Gemini successfully (${latency}ms). Model: gemini-3.8-flash`,
           latency,
-          model: 'gemini-2.5-flash',
+          model: 'gemini-3.8-flash',
           preview: reply
         });
       }
@@ -86,7 +86,7 @@ export default async function handler(req: any, res: any) {
         });
       }
 
-      const { prompt, systemInstruction, contextText, model = 'gemini-2.5-flash' } = req.body || {};
+      const { prompt, systemInstruction, contextText, model = 'gemini-3.8-flash' } = req.body || {};
 
       const targetUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${token}`;
 
