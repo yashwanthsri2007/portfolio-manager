@@ -85,7 +85,7 @@ export async function testGeminiConnection(apiKeyOverride?: string): Promise<{
       success: true,
       message: `Connected to Google Gemini successfully (${latency}ms). Model: gemini-3.8-flash`,
       latency,
-      model: 'gemini-3.8-flash',
+      model: 'gemini-2.5-flash',
       preview: replyText
     };
   } catch (err: any) {
@@ -181,7 +181,7 @@ ${holdingsSummary || 'No holdings currently added. Portfolio is awaiting setup o
         prompt: userPrompt,
         systemInstruction,
         contextText,
-        model: 'gemini-3.8-flash'
+        model: 'gemini-2.5-flash'
       })
     });
 
@@ -214,7 +214,7 @@ ${holdingsSummary || 'No holdings currently added. Portfolio is awaiting setup o
   try {
     const ai = new GoogleGenAI({ apiKey: token });
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemini-2.5-flash',
       contents: [
         { role: 'user', parts: [{ text: `${systemInstruction}\n\n${contextText}\n\nUSER QUESTION: ${userPrompt}` }] }
       ]
@@ -224,7 +224,7 @@ ${holdingsSummary || 'No holdings currently added. Portfolio is awaiting setup o
       return {
         text: response.text,
         isLive: true,
-        model: 'gemini-3.8-flash',
+        model: 'gemini-2.5-flash',
         source: 'gemini'
       };
     }
