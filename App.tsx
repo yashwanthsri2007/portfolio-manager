@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { useAuth } from './context/AuthContext';
 import { usePortfolio } from './context/PortfolioContext';
 import { AppShell } from './components/layout/AppShell';
@@ -262,6 +263,9 @@ function App() {
         isOpen={showOnboarding}
         onComplete={handleOnboardingComplete}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </>
   );
 }
