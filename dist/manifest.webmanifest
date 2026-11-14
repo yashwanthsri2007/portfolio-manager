@@ -1,0 +1,19 @@
+{
+  "short_name": "Portfolio Manager",
+  "name": "Portfolio Manager - Personal Wealth Intelligence",
+  "description": "Next-generation personal portfolio manager with Angel One SmartAPI, Multi-AI intelligence, live crypto, Indian market news, and ledger audits.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0B0F17",
+  "theme_color": "#06B6D4",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["finance", "productivity", "utilities"]
+}

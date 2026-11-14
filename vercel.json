@@ -9,6 +9,26 @@
       "destination": "/api/gemini"
     },
     {
+      "source": "/api/angelone/(.*)",
+      "destination": "/api/angelone"
+    },
+    {
+      "source": "/api/ai/(.*)",
+      "destination": "/api/ai"
+    },
+    {
+      "source": "/api/crypto/(.*)",
+      "destination": "/api/crypto"
+    },
+    {
+      "source": "/api/whatsapp",
+      "destination": "/api/whatsapp"
+    },
+    {
+      "source": "/api/metals",
+      "destination": "/api/metals"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
